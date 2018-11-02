@@ -2,22 +2,28 @@
 
 #### 项目介绍
 spring cloud Demo
+基于 spring cloud Finchley.SR1版本 --> 支持spring boot 2.0+
 
 #### 软件架构
-软件架构说明
+java 1.8
+gradle 4.8+
+spring boot 2.0.5
+spring cloud Finchley.SR1版本
 
 
 #### 安装教程
 
-1. xxxx
-2. xxxx
-3. xxxx
+注：eureka server 使用公益的server：http://eureka.springcloud.cn/eureka/
+
+#### 模块说明
+1.client1 ：业务服务
+2.client2 ：业务服务
+3.gateway ：网关服务
 
 #### 使用说明
 
-1. xxxx
-2. xxxx
-3. xxxx
+由于使用公益注册中心
+先启动业务服务（顺序不分先后），最后启动网管服务
 
 #### 参与贡献
 
