@@ -2,7 +2,6 @@ package com.sinser.gateway.filter;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
-import com.netflix.zuul.exception.ZuulException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
@@ -10,6 +9,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
@@ -44,6 +44,12 @@ public class MyFilter extends ZuulFilter {
     public Object run() {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
+        //异常处理
+        Throwable throwable = ctx.getThrowable();
+        log.error("this is a ErrorFilter : {}", throwable.getCause().getMessage());
+        ctx.set("error.status_code", HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+        ctx.set("error.exception", throwable.getCause());
+
         String token = request.getHeader("token");
         if (StringUtils.isEmpty(token)) {
             log.warn("token is empty!");
