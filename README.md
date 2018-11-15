@@ -19,11 +19,14 @@ spring cloud Demo
 1. client1 ：业务服务
 2. client2 ：业务服务
 3. gateway ：网关服务
+4. config  ：配置中心
 
 #### 使用说明
 
 由于使用公益注册中心。
 先启动业务服务（顺序不分先后），最后启动网管服务
+使用配置中心后注意配置文件application.yml和bootstrap.yml，必须使用bootstrap.yml配置
+优先级 bootstrap.yml > application.yml 查看：[配置文件 application.yml和 bootstrap.yml区别](http://https://www.cnblogs.com/BlogNetSpace/p/8469033.html)
 
 #### 参与贡献
 
