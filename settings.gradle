@@ -2,4 +2,5 @@ rootProject.name = 'cloud'
 include 'client1'
 include 'client2'
 include 'gateway'
+include 'config'
 
