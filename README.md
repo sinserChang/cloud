@@ -26,8 +26,8 @@ spring cloud Demo
 由于使用公益注册中心。  
 先启动业务服务（顺序不分先后），最后启动网管服务  
 使用配置中心后注意配置文件application.yml和bootstrap.yml，必须使用bootstrap.yml配置,否则找不到注册中心  
-优先级 bootstrap.yml > application.yml 查看：[配置文件 application.yml和 bootstrap.yml区别] 
- (http://https://www.cnblogs.com/BlogNetSpace/p/8469033.html)
+优先级 bootstrap.yml > application.yml 查看：[配置文件 application.yml和 bootstrap.yml区别](http://https://www.cnblogs.com/BlogNetSpace/p/8469033.html)  
+
 
 #### 参与贡献
 
