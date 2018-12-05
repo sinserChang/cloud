@@ -12,6 +12,16 @@
 spring:
   application:
     name: api-client1
+  datasource:
+    hikari:
+      jdbc-url: jdbc:mysql://45.40.241.79:3306/cqgzf?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      username: sinser
+      password: sinser@123
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
   cloud:
     config:
       profile: dev

@@ -1,3 +1,7 @@
 dependencies {
     compile('org.springframework.cloud:spring-cloud-starter-config')
+    compile('mysql:mysql-connector-java')
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile('com.alibaba:fastjson:1.2.47')
+    compile('org.jsoup:jsoup:1.10.3')
 }
