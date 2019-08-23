@@ -15,7 +15,7 @@ spring cloud Demo
 
 注：eureka server 使用公益的server：http://eureka.springcloud.cn/eureka/
 
-#### 模块说明
+### 模块说明
 1. client1 ：业务服务
 2. client2 ：业务服务
 3. gateway ：网关服务
